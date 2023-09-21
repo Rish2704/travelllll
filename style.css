@@ -1,0 +1,662 @@
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 60%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 32px 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.heading span{
+    font-size: 40px;
+    background: rgb(148, 240, 236);
+    color: rgb(59, 205, 245);
+    border-radius: 8px;
+    padding: 3px 8px;
+}
+
+.space{
+    background: none;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: rgb(59, 205, 245);
+    color:white;
+    padding: 10px 40px;
+    border: 2px solid rgb(59, 205, 245);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover{
+    background:gray;
+    color: white;
+    border: 2px solid gray;
+}
+
+header{
+    position: fixed;
+    background: rgb(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 9%;
+    right: 0;
+    left: 0;
+    top:0;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
+
+.logo span{
+    color: rgb(59, 205, 245);
+}
+
+.navbar a{
+    color: white;
+    font-size: 18px;
+    margin: 0 13px;
+}
+
+.navbar a:hover{
+    color:rgb(59, 205, 245);
+}
+
+.icons i{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin-right: 32px;
+}
+
+.icons i:hover{
+    color: rgb(59, 205, 245);
+}
+
+.search{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 24px 32px;
+    background:black;
+    border-top: 2px solid gray;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+}
+
+.search #search{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+} 
+
+.search label{
+    color: white;
+    cursor: pointer;
+    font-size:15px;
+    margin-left: 24px;
+}
+
+.navbar label:hover{
+    color: rgb(59, 205, 245);
+}
+
+.form-container{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    min-height: 100vh;
+    z-index: 10000;
+    width: 100% ;
+    background:gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.form-container.active{
+    top: 0;
+}
+
+.form-container form{
+    margin: 32px;
+    padding: 24px 32px;
+    border-radius: 8px;
+    background: white;
+    width: 500px;
+}
+
+.form-container form h3{
+    font-size: 40px;
+    color: rgb(60, 59, 59);
+    text-align: center;
+    padding: 16px 0;
+}
+
+.input{
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    color: gray;
+    margin: 9px 0;
+    border: 1pxpx solid black;
+}
+
+#rn{
+    margin: 25px 0;
+    color: rgb(60, 59, 59);
+}
+
+.form-container form label{
+    font-size: 17px;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+}
+
+.form-container form p{
+    padding: 4px;
+    font-size: 15px;
+    color: rgb(60, 59, 59);
+}
+
+.form-container form p a{
+    color: rgb(59, 205, 245);
+}
+
+.form-container form p a:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+#form-close{
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#menubar{
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+    font-size: 15px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 25px;
+    color: white;
+    padding: 8px 0;
+}
+
+.home-btn{
+    border: 2px solid rgb(59, 205, 245);
+    border-radius: 4px;
+    padding:12px 16px;
+    background: rgb(59, 205, 245);
+    color:white;
+    font-size: 20px;
+}
+
+.home-btn:hover{
+    background: rgb(22, 22, 22);
+    border: 2px solid rgb(22, 22, 22);
+}
+
+.video-container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.controls{
+    padding: 6px;
+    border-radius: 32px;
+    background: rgb(22, 22, 22);
+    position: relative;
+    top: 80px;
+}
+
+.vid-btn{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius:50% ;
+    background:white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.vid-btn.active{
+    background:rgb(59, 205, 245) ;
+}
+
+.row{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 24px;
+    align-items: center;
+}
+
+.book .row .image img{
+    width: 100%;
+}
+
+.book .row form{
+    flex: 1 1 640px;
+    padding: 32px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.row form .inputb{
+    padding: 8px 0;
+}
+
+.row form .inputb input{
+    width: 100%;
+    padding: 8px;
+    border: 2px solid rgba(0,0,0,0.1) ;
+    font-size: 14px;
+    color: gray;
+    text-transform: none;
+} 
+
+.row form .inputb input{
+    font-size:14px;
+    padding:8px 0;
+    color: black(43, 200, 239);
+}
+
+.row form h3{
+    font-size: 16px;
+}
+
+.book-btn{
+    border: 2px solid rgb(59, 205, 245);
+    border-radius: 4px;
+    padding:6px 16px;
+    background: rgb(59, 205, 245);
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.book-btn:hover{
+    background: rgb(22, 22, 22);
+    border: 2px solid rgb(22, 22, 22);
+}
+
+.b-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.card{
+    flex: 1 1 360px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.card img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .content{
+    padding: 32px;
+}
+
+.card .content h3{
+    font-size: 24px;
+    color: black;
+}
+
+.card .content h3 i{
+    color: rgb(59, 205, 245);
+    padding-right: 6px;
+}
+
+.card .content p{
+    font-size: 15px;
+    color: black;
+    padding: 16px 0;
+}
+
+.stars i{
+    font-size: 18px;
+    color: rgb(246, 218, 35);
+}
+
+.price{
+    font-size: 18px;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.price span{
+    color: black;
+    font-size:14px ;
+    text-decoration: line-through;
+}
+
+.services .b-container .card{
+    text-align: center;
+}
+
+.services .b-container .card i{
+    padding: 16px;
+    font-size: 50px;
+    color: rgb(59, 205, 245);
+}
+
+.services .b-container .card h3{
+    font-size: 20px;
+    color: black;
+}
+
+.services .b-container .card p{
+    font-size: 14px;
+    color: gray;
+    padding: 16px 0;
+}
+
+.services .b-container .card:hover{
+    box-shadow:0 16px 32px rgba(0,0,0,0.1);
+}
+
+.gallery .b-container .card{
+    overflow: hidden;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    border: 2px solid white;
+    border-radius: 8px;
+    flex: 1 1 360px;
+    height: 300px;
+    position: relative;
+}
+
+.gallery .b-container .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .b-container .card:hover .content{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background:rgba(0,0,0,0.7);
+    /* padding: 32px; */
+    /* padding-top: 60px; */
+}
+
+.gallery .b-container .card .content h3{
+    font-size: 25px;
+    color: rgb(59, 205, 245);
+    padding-right: 60px;
+}
+
+.gallery .b-container .card .content p{
+    font-size: 15px;
+    color: white;
+    padding: 8px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+}
+
+.gallery .b-container .book-btn{
+    margin-right: 60px;
+}
+
+.gallery .b-container .book-btn:hover{
+    border-color: rgb(59, 205, 245);
+    background: none;
+}
+
+.review-slider{
+    padding-bottom: 32px;
+}
+
+.review .card{
+    padding: 100px;
+    text-align: center;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.review .card img{
+    height: 156px;
+    width:156px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.review .card h3{
+    color: black;
+    font-size: 25px;
+}
+
+.review .card p{
+    color: gray;
+    font-size: 15px;
+    padding: 16px 0;
+}
+
+.review .card .stars i{
+    color: orange;
+    font-size: 20px;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.contact .row .image{
+    flex: 1 1 420px;
+}
+
+.contact .row .image img{
+    width: 100%;
+}
+
+.contact .row form{
+    flex: 1 1 600px;
+    padding: 25px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.contact .row form .inputb{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact .row form .inputb input,.contact .row form textarea{
+    width: 49%;
+    margin: 16px 0;
+    padding:12px;
+    font-size: 15px;
+    color: gray;
+    background:rgb(244, 242, 242);
+    text-transform: none;
+    border: none;
+}
+
+.contact .row form textarea{
+    height: 180px;
+    resize: none;
+    width:  100%;
+}
+
+.footer{
+    background-color: black;
+}
+
+.footer .b-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer .b-container .card{
+    padding: 16px 0;
+    flex: 1 1 300px;
+}
+
+.footer .b-container .card h3{
+    font-size: 24px;
+    padding: 8px;
+    color: gray;
+}
+
+.footer .b-container .card p{
+    font-size: 16px;
+    padding: 8px;
+    color: gray;
+}
+
+.footer .b-container .card a{
+    display: block;
+    font-size: 16px;
+    padding: 8px 0;
+    color: gray;
+}
+
+.footer .b-container .card a:hover{
+    color: rgb(59, 205, 245);
+    text-decoration: underline;
+}
+
+.footer .cr{
+    text-align: center;
+    padding: 32px 16px;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: normal;
+    color: gray;
+    border-top: 1px solid rgb(114, 110, 110);
+}
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:1042px){
+    header{
+        padding: 32px;
+    }
+
+    section{
+        padding: 32px;
+    }
+}
+
+@media (max-width:1042px){
+    #menubar{
+        display: initial;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background:black;
+        border-top: 2px solid gray;
+        padding: 16px 32px;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    .navbar.active{
+        clip-path:polygon(0 0,100% 0,100% 100%,0 100%) ;
+    }
+
+    .navbar a{
+        display: block;
+        border-radius: 3px;
+        padding: 16px;
+        margin: 16px 0;
+        background:rgb(60, 59, 59);
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50% ;
+    }
+
+    .heading span{
+        font-size: 40px;
+    }
+}
